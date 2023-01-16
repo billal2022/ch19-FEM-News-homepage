@@ -1,0 +1,201 @@
+@import url(bootstrap-5.3.0-alpha1-dist/css/bootstrap.css);
+:root{
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+    /***/
+    --ff:'Inter', sans-serif;;
+    --fw-400:400;
+    --fw-700:700;
+    --fw-800:800;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+font-family: var(--ff);
+}
+body{
+    padding: 50px 100px;
+}
+nav{
+    display: flex;
+    color: aliceblue;
+    height: 40px;
+justify-content: space-between;
+margin-bottom: 40px;
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.nav-bar button{
+    border: 0;
+    background-color: transparent;
+    padding: 20px;
+    color: var(--Dark-grayish-blue);
+}
+label img{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+    cursor: pointer;
+}
+ul li img{
+    display: none;
+}
+/* parent grid*/
+.parent-grid{
+    display: grid;
+    grid: auto/1fr 1fr 1fr;
+    gap: 50px;
+}
+/*left grid*/
+.first-grid{
+    display: grid;
+    grid: auto/1fr 1fr;
+    grid-column: 2 span;
+    gap: 35px;
+}
+.first-grid img{
+    grid-column: 2 span;
+    width: 100%;
+}
+.first-grid>p{
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 61px;
+
+}
+.first-grid div p{
+    color: var(--Dark-grayish-blue);
+}
+.first-grid div button{
+    background-color: var(--Soft-red);
+    color: white;
+    border: 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 16px;
+    width: 60%;
+    font-weight: var(--fw-400);
+    cursor: pointer;
+}
+.first-grid div{
+    display: grid;
+}
+/*right grid*/
+.second-grid{
+    background-color: var(--Very-dark-blue);
+    padding: 29px 29px;
+    text-transform: capitalize;
+display: grid;
+gap: 10px;
+}
+.second-grid h1{
+    color: var(--Soft-orange);
+    font-weight: var(--fw-700);
+}
+.second-grid h5{
+    color: white;
+    font-weight: var(--fw-800);
+    letter-spacing: 1px;
+}
+.second-grid p{
+    color: var(--Grayish-blue);
+    font-weight: var(--fw-400);
+}
+.line{
+    height: 1px;
+    background-color:var(--Dark-grayish-blue) ;
+    margin-block: 20px;
+}
+/*bottm*/
+.footer{
+    display: flex;
+    gap: 38px;
+    margin-top: 50px;
+}
+.footer img{
+    width: 116px;
+}
+.footer .bottom{
+    display: flex;
+    gap: 23px;
+    font-size: 20px;
+}
+.footer div{
+    display: grid;
+}
+
+@media (max-width: 800.98px){
+    body{
+        padding: 5px;
+    }
+    .first-grid{
+        display: flex;
+        grid: auto/1fr;
+        flex-direction: column;
+       margin-top: 100px;
+       background-color: white;
+    }
+    .parent-grid{
+    grid: auto/1fr;
+    gap: 0px;
+}
+.second-grid{
+    margin-top: 20px;
+}
+.first-grid button{
+    padding: 20px;
+    margin-top: 40px;
+}
+.footer {
+    display: flex;
+ 
+    flex-direction: column;
+}
+.nav-bar{
+    transform: scale(0);
+}
+
+label img{
+    display: block;
+}
+label img:active{
+    transform: scale(0.95);
+}
+ul{
+    width: 80%;
+    position: fixed;
+background-color: aliceblue;
+color: black;
+    right: 0;
+    bottom: 0;
+    top: 0;
+text-align: right;
+transform: scale(0);
+padding-right: 20px;
+display: grid;
+}
+ul li button{
+    font-size: 16px;
+}
+ul li img{
+    display: initial;
+
+}
+
+.scale{
+    transform: scale(1);
+    display: grid;
+    transition: transform 1s;
+    transform-origin: top right ;
+}
+}
